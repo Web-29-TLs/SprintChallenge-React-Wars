@@ -2,35 +2,45 @@ import React from 'react';
 import { Image, Container, Grid, Header, Card, Divider } from 'semantic-ui-react';
 
 function CharacterCard(props) {
-  var style = {
-    'font-weight': 'bold'
+  var style_h = {
+      'background':'#676767',
+    'font-weight': 'bold',
+    'color':'white',
+    'border-radius':'10px',
+    'padding':'5px'
   };
+  var style = {
+    'font-weight': 'bold',
+    'color':'#676767',
+  }
   return (
     <Grid className='card'>
+
       <Image
+        style={{'border':'1px solid #878787'}}
         src='https://www.sackettwaconia.com/wp-content/uploads/default-profile.png'
         wrapped
         ui={false}
       />
       <Card>
         <Card.Content>
-          <Card.Header as='h1'>{props.name}</Card.Header>
+          <Card.Header ><h2 style={style_h}>{props.name}</h2> </Card.Header>
           <Card.Meta>
             <p>date of birth: {props.dob}</p>
           </Card.Meta>
         </Card.Content>
 
-        <Card.Content>
+        <Card.Content content>
           <Grid>
             <Grid.Row columns={3}>
               <Grid.Column>
                 <p>
-                  <span style={style}>height: </span> {props.height}
+                  <span style={style}>height (cm): </span> {props.height}
                 </p>
               </Grid.Column>
               <Grid.Column>
                 <p>
-                  <span style={style}>mass: </span> {props.mass}
+                  <span style={style}>mass: (kg) </span> {props.mass}
                 </p>
               </Grid.Column>
               <Grid.Column>
