@@ -3,7 +3,7 @@ import { Image, Container, Grid, Header, Card, Divider } from 'semantic-ui-react
 
 function CharacterCard(props) {
   var style_h = {
-      'background':'#676767',
+      'background':'#575757',
     'font-weight': 'bold',
     'color':'white',
     'border-radius':'10px',
@@ -11,10 +11,12 @@ function CharacterCard(props) {
   };
   var style = {
     'font-weight': 'bold',
-    'color':'#676767',
+    'color':'#474747',
   }
   return (
-    <Grid className='card'>
+    <Grid
+    style={{'background':'#676767'}} 
+    className='card'>
 
       <Image
         style={{'border':'1px solid #878787'}}
@@ -22,7 +24,7 @@ function CharacterCard(props) {
         wrapped
         ui={false}
       />
-      <Card>
+      <Card  style={{'background':'#676767','color':'white'}} >
         <Card.Content>
           <Card.Header ><h2 style={style_h}>{props.name}</h2> </Card.Header>
           <Card.Meta>
